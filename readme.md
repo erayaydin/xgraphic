@@ -36,19 +36,19 @@ xgraphic -s bumblebee
 
 ## Switching to Nvidia
 
-Copy `stubs/xorg.conf` file to `/etc/X11/xorg.conf`
-Copy `stubs/nvidia.conf` file to `/usr/lib/modprobe.d/nvidia.conf`
-Copy `stubs/.xgraphic-nvidia` file to `/etc/xgraphic/.xgraphic`
-Disabling **bumblebeed** service (`systemctl disable bumblebeed`)
-Removing `/usr/lib/modprobe.d/bumblebee.conf` file
+- Copy `stubs/xorg.conf` file to `/etc/X11/xorg.conf`
+- Copy `stubs/nvidia.conf` file to `/usr/lib/modprobe.d/nvidia.conf`
+- Copy `stubs/.xgraphic-nvidia` file to `/etc/xgraphic/.xgraphic`
+- Disabling **bumblebeed** service (`systemctl disable bumblebeed`)
+- Removing `/usr/lib/modprobe.d/bumblebee.conf` file
 
 ## Switching to Bumblebee
 
-Copy `stubs/bumblebee.conf` file to `/usr/lib/modprobe.d/bumblebee.conf`
-Copy `stubs/.xgraphic-bumblebee` file to `/etc/xgraphic/.xgraphic`
-Enabling **bumblebeed** service (`systemctl enable bumblebeed`)
-Removing `/etc/X11/xorg.conf` file
-Removing `/usr/lib/modprobe.d/nvidia.conf`
+- Copy `stubs/bumblebee.conf` file to `/usr/lib/modprobe.d/bumblebee.conf`
+- Copy `stubs/.xgraphic-bumblebee` file to `/etc/xgraphic/.xgraphic`
+- Enabling **bumblebeed** service (`systemctl enable bumblebeed`)
+- Removing `/etc/X11/xorg.conf` file
+- Removing `/usr/lib/modprobe.d/nvidia.conf`
 
 ## Extra Configuration
 
