@@ -8,5 +8,7 @@ setup(name='XGraphic',
       author='Eray AYDIN',
       author_email='eray@labkod.com',
       url='https://www.github.com/erayaydin/xgraphic',
-      data_files=[('stubs', ['stubs/bumblebee.conf', 'stubs/nvidia.conf', 'stubs/.xgraphic-bumblebee', 'stubs/.xgraphic-nvidia', 'stubs/xorg.conf'])]
+      packages=['xgraphic'],
+      package_dir={'xgraphic': 'xgraphic'},
+      package_data={'xgraphic': ['stubs/*']},
      )
