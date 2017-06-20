@@ -6,10 +6,10 @@ import getopt
 from shutil import copyfile
 from os import *
 from subprocess import call
-import pkgutil
 
 def main(argv):
     appname = path.basename(__file__)
+    stubfolder = path.join(path.dirname(path.realpath(__file__)), "stubs")
 
     switch = 'nvidia'
 
@@ -43,16 +43,16 @@ def main(argv):
 
     if switch == 'nvidia':
         print("Switching to nvidia card...")
-        copyfile(pkgutil.get_data('xgraphic', 'stubs/xorg.conf'), "/etc/X11/xorg.conf")
-        copyfile(pkgutil.get_data('xgraphic', 'stubs/nvidia.conf'), "/usr/lib/modprobe.d/nvidia.conf")
-        copyfile(pkgutil.get_data('xgraphic', 'stubs/.xgraphic-nvidia'), "/etc/xgraphic/.xgraphic")
+        copyfile(path.join(stubfolder, "xorg.conf"), "/etc/X11/xorg.conf")
+        copyfile(path.join(stubfolder, "nvidia.conf"), "/usr/lib/modprobe.d/nvidia.conf")
+        copyfile(path.join(stubfolder, ".xgraphic-nvidia"), "/etc/xgraphic/.xgraphic")
 
         call(["systemctl", "disable", "bumblebeed"])
         remove("/usr/lib/modprobe.d/bumblebee.conf")
     else:
         print("Switching to bumblebee...")
-        copyfile(pkgutil.get_data('xgraphic', 'stubs/bumblebee.conf'), "/usr/lib/modprobe.d/bumblebee.conf")
-        copyfile(pkgutil.get_data('xgraphic', '.xgraphic-bumblebee'), "/etc/xgraphic/.xgraphic")
+        copyfile(path.join(stubfolder, "bumblebee.conf"), "/usr/lib/modprobe.d/bumblebee.conf")
+        copyfile(path.join(stubfolder, ".xgraphic-bumblebee"), "/etc/xgraphic/.xgraphic")
         call(["systemctl", "enable", "bumblebeed"])
 
         remove("/etc/X11/xorg.conf")
