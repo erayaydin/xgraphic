@@ -43,16 +43,16 @@ def main(argv):
 
     if switch == 'nvidia':
         print("Switching to nvidia card...")
-        copyfile(pkg_resources.resource_string(__name__, "stubs/xorg.conf"), "/etc/X11/xorg.conf")
-        copyfile(pkg_resources.resource_string(__name__, "stubs/nvidia.conf"), "/usr/lib/modprobe.d/nvidia.conf")
-        copyfile(pkg_resources.resource_string(__name__, "stubs/.xgraphic-nvidia"), "/etc/xgraphic/.xgraphic")
+        copyfile(pkg_resources.resource_string("xgraphic", "stubs/xorg.conf"), "/etc/X11/xorg.conf")
+        copyfile(pkg_resources.resource_string("xgraphic", "stubs/nvidia.conf"), "/usr/lib/modprobe.d/nvidia.conf")
+        copyfile(pkg_resources.resource_string("xgraphic", "stubs/.xgraphic-nvidia"), "/etc/xgraphic/.xgraphic")
 
         call(["systemctl", "disable", "bumblebeed"])
         remove("/usr/lib/modprobe.d/bumblebee.conf")
     else:
         print("Switching to bumblebee...")
-        copyfile(pkg_resources.resource_string(__name__, "stubs/bumblebee.conf"), "/usr/lib/modprobe.d/bumblebee.conf")
-        copyfile(pkg_resources.resource_string(__name__, "stubs/.xgraphic-bumblebee"), "/etc/xgraphic/.xgraphic")
+        copyfile(pkg_resources.resource_string("xgraphic", "stubs/bumblebee.conf"), "/usr/lib/modprobe.d/bumblebee.conf")
+        copyfile(pkg_resources.resource_string("xgraphic", "stubs/.xgraphic-bumblebee"), "/etc/xgraphic/.xgraphic")
         call(["systemctl", "enable", "bumblebeed"])
 
         remove("/etc/X11/xorg.conf")
