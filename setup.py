@@ -11,4 +11,5 @@ setup(name='XGraphic',
       packages=['xgraphic'],
       package_dir={'xgraphic': 'xgraphic'},
       package_data={'xgraphic': ['stubs/*']},
+      scripts=['xgraphic/xgraphic.py']
      )
