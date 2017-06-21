@@ -1,8 +1,6 @@
 #!/usr/bin/python
 
-import sys
 import os
-import getopt
 from shutil import *
 from os import *
 from subprocess import call
