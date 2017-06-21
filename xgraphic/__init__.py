@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 import os
 from shutil import *
 from os import *
@@ -18,6 +16,7 @@ def to_nvidia():
     copy(stubs+"/60-xgraphic-nvidia.sh", "/etc/X11/xinit/xinitrc.d/60-xgraphic-nvidia.sh")
 
     call(["systemctl", "disable", "bumblebeed"])
+
     if os.path.exists("/usr/lib/modprobe.d/bumblebee.conf"):
         remove("/usr/lib/modprobe.d/bumblebee.conf")
     if os.path.exists("/etc/X11/xinit/xinitrc.d/60-xgraphic-bumblebee.sh"):

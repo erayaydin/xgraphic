@@ -1,23 +1,21 @@
-#!/usr/bin/python
-
 from os import *
 import sys
 import getopt
 import xgraphic
 
-def main(argv):
-    appname = path.basename(__file__)
+def main():
+    appname = "xgraphic"
     switch = 'nvidia'
 
     try:
-        opts, args = getopt.getopt(argv, "hs:", ["switch="])
+        opts, args = getopt.getopt(sys.argv[1:], "hs:", ["switch="])
     except getopt.GetoptError:
-        print(appname+' -s [nvidia,bumblebee]')
+        print(appname + ' -s [nvidia,bumblebee]')
         sys.exit(2)
 
-    for opt,arg in opts:
+    for opt, arg in opts:
         if opt == '-h':
-            print(appname+' -s [nvidia,bumblebee]')
+            print(appname + ' -s [nvidia,bumblebee]')
             sys.exit()
         elif opt in ("-s", "--switch"):
             switch = arg
@@ -36,5 +34,5 @@ def main(argv):
         print('You should pick nvidia or bumblebee for graphics card switch.')
         sys.exit(2)
 
-if __name__ == "__main__":
-    main(sys.argv[1:])
+if __name__ == '__main__':
+    main()
