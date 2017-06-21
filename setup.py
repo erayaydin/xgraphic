@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup
 
 setup(name='XGraphic',
-      version='0.1.1',
+      version='0.1.2',
       description='Switching between nvidia and bumblebee',
       author='Eray AYDIN',
       author_email='eray@labkod.com',
@@ -12,5 +12,5 @@ setup(name='XGraphic',
       scripts=['bin/xgraphic'],
       license='LICENSE.txt',
       long_description=open('README.txt').read(),
-      package_data={'xgraphic': ['stubs/*']}
+      include_package_data=True
      )
