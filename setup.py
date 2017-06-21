@@ -15,6 +15,6 @@ setup(name='XGraphic',
               'xgraphic = xgraphic.__main__:main'
           ]
       },
-      long_description=open('README.txt').read(),
+      long_description=open('README.rst').read(),
       include_package_data=True
      )
