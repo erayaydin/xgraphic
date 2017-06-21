@@ -22,12 +22,12 @@ Add below line to `~/.xinitrc` file
 
 Switching to nvidia
 ```
-xgraphic -s nvidia
+xgraphic nvidia
 ```
 
 Switching to bumblebee
 ```
-xgraphic -s bumblebee
+xgraphic bumblebee
 ```
 
 **Don't forget to restart xorg**
