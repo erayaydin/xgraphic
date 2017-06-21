@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='XGraphic',
-      version='0.1.0',
+      version='0.1.1',
       description='Switching between nvidia and bumblebee',
       author='Eray AYDIN',
       author_email='eray@labkod.com',
@@ -12,5 +12,5 @@ setup(name='XGraphic',
       scripts=['bin/xgraphic'],
       license='LICENSE.txt',
       long_description=open('README.txt').read(),
-      include_package_data=True
+      package_data={'xgraphic': ['stubs/*']}
      )

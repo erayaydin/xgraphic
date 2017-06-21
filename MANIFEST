@@ -2,9 +2,9 @@
 README.txt
 setup.py
 bin/xgraphic
-stubs/60-xgraphic-bumblebee.sh
-stubs/60-xgraphic-nvidia.sh
-stubs/bumblebee.conf
-stubs/nvidia.conf
-stubs/xorg.conf
 xgraphic/__init__.py
+xgraphic/stubs/60-xgraphic-bumblebee.sh
+xgraphic/stubs/60-xgraphic-nvidia.sh
+xgraphic/stubs/bumblebee.conf
+xgraphic/stubs/nvidia.conf
+xgraphic/stubs/xorg.conf
