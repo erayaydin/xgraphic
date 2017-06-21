@@ -15,7 +15,7 @@ Linux helper for switching between Nvidia and Bumblebee.
 Add below line to `~/.xinitrc` file
 
 ```
-xrdb -merge /etc/xgraphic/.xgraphic
+/etc/xgraphic/xgraphic
 ```
 
 # Usage
