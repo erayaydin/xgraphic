@@ -9,12 +9,12 @@ setup(name='XGraphic',
       author_email='eray@labkod.com',
       url='https://www.github.com/erayaydin/xgraphic',
       packages=['xgraphic'],
+      license='LICENSE.txt',
       entry_points={
           'console_scripts': [
               'xgraphic = xgraphic.__main__:main'
           ]
       },
-      license='LICENSE.txt',
       long_description=open('README.txt').read(),
       include_package_data=True
      )
