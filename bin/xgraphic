@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from os import *
 import sys
 import getopt
 import xgraphic
@@ -21,7 +22,7 @@ def main(argv):
         elif opt in ("-s", "--switch"):
             switch = arg
 
-    if os.geteuid() != 0:
+    if geteuid() != 0:
         print('You should be root for switching graphic card.')
         sys.exit(2)
 
