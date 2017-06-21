@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='XGraphic',
-      version='0.1.5',
+      version='0.2.0',
       description='Switching between nvidia and bumblebee',
       author='Eray AYDIN',
       author_email='eray@labkod.com',
