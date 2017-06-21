@@ -1,1 +1,1 @@
-recursive-include xgraphic/stubs
+recursive-include stubs *
